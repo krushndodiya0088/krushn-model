@@ -18,6 +18,7 @@ void main()
 			printf("Enter element for matrix2[%d][%d] : ",i,j);
 			scanf("%d",&matrix[i][j]);
 		}
+		printf("\n");
 	}
 	
 }

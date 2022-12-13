@@ -3,13 +3,13 @@
 void main()
 {
 	printf("\tDetails:-\n\n");
-	printf("First name:\t Arjun\n");
-	printf("Last Name: \tHirpara\n");
-	printf("Birthdate:\t28-10-1996\n");
-	printf("Address:\t Ahmedabad\n");
-	printf("Mobile No.:\t7383851940\n");
-	printf("Education:\tB.E.\n");
-	printf("Course Name:\t C\n");
-	printf("Occupation:\tStudent b\n");
-	printf("Hobbies:\tGuitar,Reading,Exploring,etc");
+	printf("First name:\t Krushn\n");
+	printf("Last Name: \tDodiya\n");
+	printf("Birthdate:\t18-09-2000\n");
+	printf("Address:\t Nagnesh\n");
+	printf("Mobile No.:\t8780106064\n");
+	printf("Education:\tcomputer since\n");
+	printf("Course Name:\t flutter\n");
+	printf("Occupation:\tStudent c\n");
+	printf("Hobbies:\trunning,gym,programing,etc");
 }
