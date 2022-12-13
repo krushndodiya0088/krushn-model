@@ -10,15 +10,16 @@ void main()
 			printf("Enter element for matrix1[%d][%d] : ",i,j);
 			scanf("%d",&matrix[i][j]);
 		}
+		scanf("%d",matrix1);
 	}
-	for(i=0;i<3;i++)
+	//for(i=0;i<3;i++)
 	{
-		for(j=0;j<3;j++)
+		//for(j=0;j<3;j++)
 		{
-			printf("Enter element for matrix2[%d][%d] : ",i,j);
-			scanf("%d",&matrix[i][j]);
+			//printf("Enter element for matrix2[%d][%d] : ",i,j);
+			//scanf("%d",&matrix[i][j]);
 		}
-		printf("\n");
+		//printf("\n");
 	}
 	
 }
