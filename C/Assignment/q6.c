@@ -1,17 +1,11 @@
 #include<stdio.h>
 void main()
 {
-    int year;
-    printf("enter year: ");
-    scanf("%d",&year);
-    if (year%4==0)
-    {
-       printf("%dyear is leap year ",year);
-    }
-    else
-    {
-        printf("%dyear is not leap year ",year); 
-    }
-
-    
+     int days, years;
+     printf("enter day:");
+     scanf("%d",&days);
+days= days;
+years= days / 365;
+printf("\n\n Number of years is : %d",years);
+return (0); 
 }
