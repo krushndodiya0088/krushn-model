@@ -1,0 +1,92 @@
+.main{
+			width: 1000px;
+			height: auto;
+			margin: auto;
+            background-color: #cddff3;
+        
+		}
+.header{
+            background: linear-gradient(to top, #99ccff 32%, #ffffff 99%);
+            width: 1000px;
+            height: 70px;
+            margin: auto;
+            color: red;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            
+
+        }
+		h3{
+			color: red;
+		}
+		.parent{
+			
+			margin-left: 430px;
+		}
+		.required::before {
+		    content:" *  ";
+		    color: red;
+		    margin-left: -70px;
+
+         }
+         .required1::before {
+		    content:" *  ";
+		    color: red;
+		    margin-left: -126px;
+
+         }
+          .required3::before {
+		    content:" *  ";
+		    color: red;
+		    margin-left: 123px;
+
+         }
+         .required4::before {
+		    content:" *  ";
+		    color: red;
+		    margin-left: 94px;
+
+         }
+         .required5::before {
+		    content:" *  ";
+		    color: red;
+		    margin-left: 130px;
+
+         }
+         .flex-parent{
+            justify-content: center;
+            display: flex;
+         }
+
+        button.margin-right {
+            margin-right: 20px;
+        }
+         .required6::before {
+		    content:" *  ";
+		    color: red;
+		    margin-left: 140px;
+
+         }
+         .required7::before {
+		    content:" *  ";
+		    color: red;
+		    margin-left: 90px;
+
+         }
+         .required8::before {
+            content:" *  ";
+            color: red;
+            margin-left: 5px;
+         }
+         .parent2{
+         	margin-top: -132px;
+         	margin-left: 420px;
+         }
+         .parent3{
+         	margin-left: 142px;
+         }
+         .parent4{
+          margin-top: -77px;
+          margin-left: 442px;
+         }
