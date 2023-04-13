@@ -1,0 +1,83 @@
+DDL (Data Definition Language) 
+
+- Create,alter drop,truncate
+
+DML(Data Manipulation Language)
+
+- Insert, update,delete
+
+DQL(Data Query Language)
+
+- Select
+
+
+1) DDL
+
+- create database Nov15SE;
+
+- ALTER TABLE `employee` ADD `email` VARCHAR(50) NOT NULL AFTER `lname`;
+
+-ALTER TABLE `employee` DROP `email
+
+Constraints : it is use to strictly follow the rules for the tables
+
+- primary key
+- foriegn key
+- unique
+- not null
+
+DDL
+
+1) Create 
+
+- create database database-name;
+
+- table
+
+create table table-name(
+col-name data-type constraint,
+col-name data-type constraint,
+col-name data-type constraint,
+col-name data-type constraint,
+..
+..
+....
+);
+
+
+e.g 
+
+create table employee(
+    id int primary key AUTO_INCREMENT not null,
+    fname varchar(20) not null,
+    lname varchar(20) not null,
+    email varchar(20) NOT null UNIQUE
+);
+
+
+2) Drop
+
+drop table employee;
+
+3) alter
+
+ALTER TABLE `employee` ADD `mobile` VARCHAR(50) NOT NULL AFTER `email`;
+
+
+DQL (Data Query Language)
+
+-select
+
+DML 
+
+-insert
+
+syntax: insert into table-name(col-name1,col-name2............) 
+         values (val1,........);
+
+insert into employee (fname,lname,email,mobile) VALUES ('parshwa','bhavsar','par@gmail.com','9897899987');
+
+insert into employee (fname,lname,email,mobile) VALUES ('vivek','rasadiya','vivek@gmail.com','9897899987');
+
+
+

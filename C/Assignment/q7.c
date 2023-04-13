@@ -4,13 +4,13 @@ void main()
 {
 	int a,b,choice;
 	
-	printf("\t\t\xB2\xB2\xB2\xB2\xB2 operation inclde Calculator \xB2\xB2\xB2\xB2\xB2\xB2\xB2");
+	printf("\n\t\xB2\xB2\xB2 operation inclde Calculator \xB2\xB2\xB2\t\n");
 	printf("\n\n\t\tEnter A : ");
 	scanf("%d",&a);
 	printf("\t\tEnter B : ");
 	scanf("%d",&b);
 	printf("\n\t\tA = %d, B = %d\n",a,b);
-	printf("\n\t\t\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 Menu \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2");
+	printf("\n\t\xB2\xB2\xB2 Menu \xB2\xB2\xb2\t\n");
 	printf("\n\n\t\tPress 1. Addition");
 	printf("\n\t\tPress 2. Subtraction");
 	printf("\n\t\tPress 3. Multiplication");

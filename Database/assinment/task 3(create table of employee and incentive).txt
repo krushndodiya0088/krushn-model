@@ -1,0 +1,127 @@
+CREATE TABLE Employee
+(
+    Employee_id int(200) PRIMARY KEY AUTO_INCREMENT,
+    First_name varchar(200),
+    Last_name varchar(200),
+    Salary int(200),
+    Joining_date varchar(200),
+    Department varchar(200)
+);
+
+________________________________________________________________________
+________________________________________________________________________
+
+INSERT INTO employee (First_name,Last_name,Salary,Joining_date,Department)
+ VALUES ('John','Abraham',1000000,'01-Jan-13 12.00.00 AM','Banking'),
+ ('Michael','Clarke',800000,'01-Jan-13 12.00.00 AM','Insurance'),
+ ('Roy','Thomas',700000,'01-Feb-13 12.00.00 AM','Banking'),
+ ('Tom','Jose',600000,'01-Feb-13 12.00.00 AM','Insurance'),('Jerry','Pinto',650000,'01-Feb-13 12.00.00 AM','Insurance'),
+('Philip','Mathew',750000,'01-Jan-13 12.00.00 AM','Services'),
+('TestName1','123',650000,'01-Jan-13 12.00.00 AM','Services'),
+('TestName2','Lname%',600000,'01-Feb-13 12.00.00 AM','Insurance');
+
+
+
+________________________________________________________________________
+________________________________________________________________________
+
+CREATE TABLE Incentive
+(
+    Employee_ref_id int(200),
+    FOREIGN KEY (Employee_ref_id) REFERENCES employee(Employee_id),
+ 	Incentive_date varchar(200),
+    Incentive_amount int(200)  
+);
+________________________________________________________________________
+________________________________________________________________________
+
+
+INSERT INTO `incentive` (`Employee_ref_id`, `Incentive_date`, `Incentive_amount`) 
+VALUES ('1', '01-Feb-13', '5000'), ('2', '01-Feb-13', '3000'), ('3', '01-Feb-13', '4000'),
+ ('1', '01-Jan-13', '4500'), ('2', '01-Jan-13', '3500');
+
+________________________________________________________________________
+________________________________________________________________________
+
+a)Get First_Name from employee table using Tom name “Employee Name”.  
+
+SELECT * FROM `employee` WHERE First_name='Tom';
+
+________________________________________________________________________
+________________________________________________________________________
+
+b)Get FIRST_NAME, Joining Date, and Salary from employee table.
+
+SELECT First_name,Joining_date,Salary FROM `employee` ;
+
+_______________________________________________________________________
+_______________________________________________________________________
+
+c)Get all employee details from the employee table order by First_Name Ascending and Salary descending?  
+
+First_name Ascending
+
+SELECT * FROM `employee` ORDER BY First_name ASC;
+
+
+Salary Descending
+
+SELECT * FROM `employee` ORDER BY Salary DESC;
+
+_______________________________________________________________________
+_______________________________________________________________________
+
+d)Get employee details from employee table whose first name contains ‘J’.  
+
+SELECT * FROM employee WHERE First_name LIKE '%J%';
+
+_______________________________________________________________________
+_______________________________________________________________________
+
+e)Get department wise maximum salary from employee table order by salary ascending? 
+
+SELECT * FROM `employee` WHERE Department='Insurance' ORDER BY Salary ASC;
+
+___________________________________________________________________________ 
+___________________________________________________________________________
+
+f)Select first_name, incentive amount from employee and incentives table for 
+  those employees who have incentives and incentive amount greater than 3000 
+
+SELECT  employee.First_name, incentive.Incentive_amount FROM employee INNER JOIN incentive ON employee.
+Employee_id = incentive.Employee_ref_id WHERE incentive_amount >3000; 
+
+________________________________________________________________________
+________________________________________________________________________
+
+g)Create After Insert trigger on Employee table which insert records in view table  
+
+
+CREATE TABLE insert_trig
+(
+  Employee_id int(200),
+  First_name varchar(200),
+  Last_name varchar(200),
+  Salary int(200),
+  Joining_date varchar(200),
+  Department varchar(200),
+  date_time timestamp,
+  action_performed varchar(200)
+);
+
+-------------------------------------------
+-------------------------------------------
+
+DELIMITER $$
+
+CREATE TRIGGER insert_data AFTER INSERT ON employee FOR EACH ROW
+BEGIN
+ 	INSERT INTO insert_trig(Employee_id,First_name,Last_name,Salary,
+    Joining_date,Department,action_performed) VALUES (new.Employee_id,
+    new.First_name,new.Last_name,new.Salary,new.Joining_date,new.Department,'Record Inserted!');
+    
+END
+
+
+_______________________________________________________________________
+_______________________________________________________________________

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 align="center">User Registration Page</h1>
+    <a href="imgdemo.html">Go Back to Home Page</a>
+    <hr>
+    
+    <div style="border:1px solid grey;width:500px;height:500px;margin-left: 30%;background-color: lightgrey">
+        <h1 align="center">Register With Us.</h1>
+        <hr>
+    <form name="register" method="post" action="login.html">
+        <table align="center">
+            <tr>
+                <td>First Name : </td>
+                <td><input type="text" name="fname" required placeholder="Enter First Name"></td>
+            </tr>
+    
+            <tr>
+                <td>Last Name : </td>
+                <td><input type="text" name="lname" required></td>
+            </tr>
+    
+            <tr>
+                <td>Email : </td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td>Mobile : </td>
+                <td><input type="text" name="mobile" required> </td>
+            </tr>
+            <tr>
+                <td>Password : </td>
+                <td><input type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td>Confirm Password : </td>
+                <td><input type="password" name="cpassword" required></td>
+            </tr>
+            <tr>
+                <td>Gender : </td>
+                <td>
+                    <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="Female">Female
+                </td>
+            </tr>
+            <tr>
+                <td>Hobbies : </td>
+                <td>
+                    <input type="checkbox" name="hobby" value="cricket">Cricket
+                    <input type="checkbox" name="hobby" value="football">Football
+                    <input type="checkbox" name="hobby" value="swimming">Swimming
+                    <input type="checkbox" name="hobby" value="hockey">Hockey
+                </td>
+            </tr>
+            <tr>
+                <td>Education Qualification : </td>
+                <td>
+                    <select>
+                        <option><----Select---></option>
+                        <option>SSC</option>
+                        <option>HSC</option>
+                        <option>Graduation</option>
+                        <option>Post Graduation</option>
+                        <option>PHD</option>
+                    </select>
+                </td>
+            </tr>
+    
+            <tr>
+                <td>Address : </td>
+                <td>
+                    <textarea rows="5" cols="25" name="address"></textarea>
+                </td>
+    
+            </tr>
+    
+    
+            <tr>
+                <td></td>
+                <td><input type="submit" name="action"></td>
+            </tr>
+    
+    
+    
+        </table>
+    </form>	
+    
+    </div>
+    
+    
+
+</div>
+</body>
+</html>

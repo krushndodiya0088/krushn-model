@@ -1,0 +1,20 @@
+CREATE TABLE Information
+(
+    FirstName varchar(200),
+    LastName varchar(200),
+    Address varchar(200),
+    City varchar(200),
+    Age int(200)
+);
+
+__________________________________________________________________
+__________________________________________________________________
+
+INSERT INTO information(FirstName,LastName,Address,City,Age) VALUES ('Mickey','Mouse','123 Fantasy Way','Anaheim',73),
+('Bat','Man','321 Cavern Ave','Gotham',54),('Wonder','Woman','987 Truth Way','Paradise',39),
+('Donald','Duck','555 Quack Street','Mallard',65),('Bugs','Bunny','567 Carrot Street','Rascal',58),
+('Wiley','Cayote','999 Acme Way','Canyon',61),('Cat','Woman','234 Perfume Street','Hairball',32),
+('Tweety','Bird','543','Itotltaw',28);
+
+__________________________________________________________________
+__________________________________________________________________

@@ -1,0 +1,31 @@
+CREATE TABLE Student 
+(
+    Rollno int(200) PRIMARY KEY AUTO_INCREMENT,
+    Name varchar(200),
+    Branch varchar(200)
+);
+
+_______________________________________________________
+_______________________________________________________
+
+INSERT INTO student (Name,Branch) VALUES ('Jay','Computer Science'),
+('Suhani','Electronic and Com'),('Kriti','Electronic and Com');
+
+_______________________________________________________
+_______________________________________________________
+
+CREATE TABLE Exam
+(
+    Rollno int(200),
+    FOREIGN KEY (Rollno) REFERENCES student(Rollno),
+    S_code varchar(200),
+    Marks int(200),
+    P_code varchar(200)
+);
+
+_______________________________________________________
+_______________________________________________________
+
+INSERT INTO `exam` (`Rollno`, `S_code`, `Marks`, `P_code`) VALUES ('1', 'CS11', '50', 'CS'),
+ ('1', 'CS12', '60', 'CS'), ('2', 'EC101', '66', 'EC'), ('2', 'EC102', '70', 'EC'),
+  ('3', 'EC101', '45', 'EC'), ('3', 'EC102', '50', 'EC');

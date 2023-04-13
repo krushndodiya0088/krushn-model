@@ -1,0 +1,58 @@
+
+
+LIKE
+
+SELECT * FROM product WHERE prd_name LIKE 'D%'
+
+SELECT * FROM product WHERE prd_name LIKE '%s'
+
+SELECT * FROM product WHERE prd_name LIKE '%r%'
+
+SELECT * FROM product WHERE prd_name LIKE '_h%'
+
+SELECT * FROM product WHERE prd_name LIKE '__i%'
+
+SELECT * FROM product WHERE prd_name LIKE 'D%s'
+
+
+
+Sum & Avg
+
+SELECT SUM(prd_price) FROM product
+
+
+SELECT AVG(prd_price) FROM product
+
+
+
+Joins in sql:-
+
+
+Joins-- To join the tables that is related to each other
+
+
+Types of joins--
+
+
+1) Inner join
+
+2) Outer join
+
+3) Left join
+
+4) Right join
+
+5) Full join
+
+
+SELECT category.cate_name,subcategory.subcate_name FROM category
+INNER JOIN subcategory ON category.cate_id=subcategory.cate_id_fk
+
+
+
+
+SELECT category.cate_name,subcategory.subcate_name,product.prd_name,product.prd_price,product.prd_desc_price FROM category
+
+JOIN subcategory ON category.cate_id=subcategory.cate_id_fk
+
+JOIN product ON category.cate_id=product.subcate_id_fk

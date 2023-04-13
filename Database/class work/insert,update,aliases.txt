@@ -1,0 +1,47 @@
+insert into employee (fname,lname,email) VALUES ('harshit','vadadoriya','harsh@gmail.com');
+
+ALTER TABLE `employee` CHANGE `id` `id` INT(11) NOT NULL AUTO_INCREMENT;
+
+
+insert into employee (fname,lname,email) VALUES ('dhruv','patel','dhruv@gmail.com'), ('vivek','rasadiya','vivek@gmail.com'),
+('henil','kaneria','heni@gmail.com'),
+('neel','deda','neel@gmail.com'),
+('parshwa','bhavsar','parshwa@gmail.com'),
+('vansh','ajmera','vansh@gmail.com'),
+('krushn','dodiya','krushn@yahoo.com'),
+('abhiraj','sinh','abhi@gmail.com')
+
+alter table employee ADD SALARY INT NOT NULL AFTER email;
+
+
+
+UPDATE : To modify the current record.
+
+syntax:
+
+	update table-name
+	set col-name=value
+	where col-name=value
+
+e.g
+
+update employee set SALARY=40000 WHERE id=2;
+
+SELECT id from employee where fname='dhruv';
+
+SELECT id,fname,SALARY from employee WHERE id=2
+
+
+Aliases : using AS
+
+SELECT id AS 'Emp_id',fname as 'First_Name',lname AS 'Last_Name',email as 'Email-Id',SALARY AS 'Monthly_Salary' from employee;
+
+SELECT id AS 'Emp_id',fname as 'First_Name',lname AS 'Last_Name',email as 'Email-Id',SALARY AS 'Monthly_Salary',SALARY*12 as 'Salary_Per_Annum' from employee;
+
+
+
+
+
+
+
+

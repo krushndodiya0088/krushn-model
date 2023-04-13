@@ -1,0 +1,73 @@
+Procedure
+
+Function in sql
+
+create procedure procedurename
+
+call procedurename;
+
+Triggers in sql:-
+
+
+CREATE DATABASE triggers_db
+
+
+CREATE TABLE candidates
+(
+    c_id int(200),
+    c_name varchar(200),
+    c_mobile varchar(200)
+    
+    
+    
+)
+
+
+CREATE TABLE test
+(
+    id int(200),
+    name varchar(200),
+    mobile varchar(200),
+    date_time timestamp,
+    action_performed varchar(200)
+    
+    
+    
+)
+
+
+DELIMITER $$
+
+CREATE TRIGGER insert_data AFTER INSERT ON candidates FOR EACH ROW
+BEGIN
+
+	INSERT INTO test(id,name,mobile,action_performed) VALUES(new.c_id,new.c_name,new.c_mobile,"Record Inserted!");
+
+
+END
+
+
+DELIMITER $$
+
+CREATE TRIGGER update_data AFTER UPDATE ON candidates FOR EACH ROW
+BEGIN
+
+	INSERT INTO test(id,name,mobile,action_performed) VALUES(new.c_id,new.c_name,new.c_mobile,"Record Updated!");
+
+
+END
+
+
+
+
+----------------------------------------------
+
+DELIMITER $$
+
+CREATE TRIGGER delete_data AFTER DELETE ON candidates FOR EACH ROW
+BEGIN
+
+	INSERT INTO test(id,name,mobile,action_performed) VALUES(old.c_id,old.c_name,old.c_mobile,"Record Deleted!");
+
+
+END
