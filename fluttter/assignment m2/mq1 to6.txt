@@ -1,0 +1,147 @@
+
+(1) what is inhetitance
+--->
+Inheritance is a fundamental concept in object-oriented programming (OOP) that allows
+a new class to be based on an existing class, inheriting all the properties and behaviors 
+of the existing class. The existing class is called the base class or parent class, while 
+the new class is called the derived class or child class.
+
+Inheritance enables code reusability and helps in creating a hierarchical class structure,
+where classes can be organized in a logical and meaningful way. The derived class can inherit 
+all the members of the base class, such as fields, properties, methods, and events, and can also
+add its own members or override the inherited ones.
+
+For example, suppose we have a class called "Person" that has fields for name, age, and address. 
+We can create a derived class called "Student" that inherits from the "Person" class and adds its own 
+fields such as student ID and GPA. The "Student" class can use all the fields and methods of the "Person"
+class and can also have its own unique properties and behaviors.
+
+Overall, inheritance is a powerful concept in OOP that allows developers to create complex and efficient 
+code by reusing existing classes and creating a hierarchy of classes.
+
+____________________________________________________________________________________________________
+
+(2)  which inheritance is not supported by dart? why?
+--->
+Dart does not support multiple inheritance. Multiple inheritance allows a class to inherit from 
+more than one superclass.
+
+The reason Dart does not support multiple inheritance is to avoid the "diamond problem," 
+which occurs when two superclasses of a class have a method with the same name and
+signature. This can lead to ambiguity in the inheritance hierarchy and make the code difficult to
+maintain and understand.
+
+Instead of multiple inheritance, Dart supports mixins, which provide a way to reuse a class's 
+code in multiple class hierarchies. Mixins allow a class to include the functionality of another
+class without actually inheriting from it. This approach provides a more flexible way to reuse 
+code while avoiding the issues that can arise with multiple inheritance.
+
+____________________________________________________________________________________________________
+
+
+(3) what is advantage of inheritance?
+--->
+Inheritance is a fundamental concept in object-oriented programming that allows a class to 
+inherit properties and behavior from its parent class(es). Some advantages of inheritance
+are:
+
+1. Code reuse: Inheritance enables the creation of a hierarchy of classes where a child class 
+   can inherit code and attributes from its parent class. This reduces code duplication and 
+   makes code easier to maintain.
+
+2. Polymorphism: Inheritance allows subclasses to inherit the methods and attributes of the 
+   parent class, and they can also override these methods or create new ones. This provides 
+   a way to implement polymorphism, which allows objects of different classes to be used 
+   interchangeably.
+
+3. Flexibility and modularity: Inheritance makes it possible to create a hierarchy of related 
+   classes with different levels of specificity. This allows for a more flexible and modular 
+   code design, making it easier to modify or extend the functionality of the program.
+
+4. Encapsulation: Inheritance can be used to define access modifiers for methods and 
+   attributes, which provides encapsulation and improves the security of the program.
+
+   Overall, inheritance is a powerful tool that helps to make code more efficient, flexible, and 
+   easier to maintain.
+   
+________________________________________________________________________________________________
+
+
+(4) difference between inheritance and encapsulation.
+--->
+Inheritance and encapsulation are both important concepts in object-oriented 
+programming, but they serve different purposes.
+
+Inheritance refers to the ability of a class to inherit properties and behavior from its parent 
+class(es). This means that a child class can access and use the methods and attributes of its 
+parent class. Inheritance promotes code reuse and makes it possible to create hierarchies of 
+related classes with different levels of specificity. For example, a car class can inherit 
+properties and methods from a vehicle class, and a sports car class can inherit from the car 
+class. This allows for more efficient and modular code design.
+
+Encapsulation, on the other hand, refers to the practice of hiding the implementation details 
+of a class and providing access to the class's functionality through well-defined interfaces. 
+This means that the internal workings of a class are not visible to external code, and the 
+class provides a set of methods and attributes for external code to interact with. 
+Encapsulation promotes information hiding, improves code security, and allows for better 
+maintenance of the program. For example, a bank account class can encapsulate its balance 
+variable by only allowing access to it through the withdraw and deposit methods, which 
+ensures that the balance cannot be modified directly by external code.
+
+In summary, inheritance is a mechanism for creating hierarchies of related classes, while 
+encapsulation is a mechanism for hiding the implementation details of a class and providing 
+a well-defined interface for external code to interact with. Both concepts are important for
+ creating efficient, modular, and secure code in object-oriented programming.
+
+________________________________________________________________________________________________
+
+(5) Diffrence between inheritance and abstraction.
+--->
+Inheritance and abstraction are both important concepts in object-oriented programming, 
+but they serve different purposes.
+
+Inheritance refers to the ability of a class to inherit properties and behavior from its parent 
+class(es). This means that a child class can access and use the methods and attributes of its 
+parent class. Inheritance promotes code reuse and makes it possible to create hierarchies of 
+related classes with different levels of specificity. For example, a car class can inherit 
+properties and methods from a vehicle class, and a sports car class can inherit from the car 
+class.
+
+Abstraction, on the other hand, refers to the practice of focusing on the essential features of 
+an object or system and ignoring the non-essential details. Abstraction allows programmers 
+to create abstract classes or interfaces that define the methods and attributes that a class 
+must implement, without specifying how those methods and attributes are implemented. 
+This promotes modularity and flexibility in code design. For example, a Shape interface can 
+define a method for calculating the area of a shape, without specifying how the calculation is 
+performed.
+
+In summary, inheritance is a mechanism for creating hierarchies of related classes, while 
+abstraction is a mechanism for defining interfaces and focusing on essential features. Both 
+concepts are important for creating efficient, modular, and flexible code in object-oriented 
+programming.
+
+________________________________________________________________________________________________
+
+(6) difference between inheritance and polymorphism.
+--->
+Inheritance and polymorphism are both important concepts in object-oriented 
+programming, but they serve different purposes.
+
+Inheritance refers to the ability of a class to inherit properties and behavior from its parent 
+class(es). This means that a child class can access and use the methods and attributes of its 
+parent class. Inheritance promotes code reuse and makes it possible to create hierarchies of 
+related classes with different levels of specificity.
+
+Polymorphism, on the other hand, refers to the ability of objects of different classes to be 
+used interchangeably. Polymorphism is achieved through method overriding, where a 
+subclass can override a method in its parent class to provide a different implementation. 
+Polymorphism allows for more flexible and modular code design, as it allows for a single 
+interface to be used to represent multiple types of objects. For example, a Shape class can 
+define a method for calculating the area of a shape, and this method can be overridden by 
+specific shape classes such as Circle or Square to provide their own implementation of the 
+area calculation.
+
+In summary, inheritance is a mechanism for creating hierarchies of related classes, while 
+polymorphism is a mechanism for allowing objects of different classes to be used 
+interchangeably. Both concepts are important for creating efficient, flexible, and modular 
+code in object-oriented programming.
