@@ -1,0 +1,42 @@
+
+/*                            
+                             MODULE - 1,
+
+
+1)what is flutter?
+
+Flutter is an open source framework developed and supported by Google. Frontend and full-stack developers use Flutter 
+to build an application’s user interface (UI) for multiple platforms with a single codebase.
+
+When Flutter launched in 2018, it mainly supported mobile app development. Flutter now supports application development 
+on six platforms: iOS, Android, the web, Windows, MacOS, and Linux.
+
+
+2)why did you choose flutter 
+
+The first Reason for choosing Flutter for the next project is development time. Flutter is based on dart language and if 
+you are familiar with java and similar programming language it is really easy to learn Flutter. In Flutter logic and UI will
+be written in the same code-base.
+
+
+3)what is dart?
+
+Dart is a programming language designed by Lars Bak and Kasper Lund and developed by Google. The programming language can be 
+used to develop web and mobile apps as well as server and desktop applications. It is an object-oriented, class-based, 
+garbage-collected language with C-style syntax.
+
+
+4)Difference between hybrid application and native application.
+
+In a native app, your developers have to rewrite and redesign all the app functionality in the native development language. 
+A hybrid app lets you write the app functionality in a single codebase. You can then wrap your code in a lightweight native 
+app shell or container.
+
+5)Full Form of SDK,APK,ADB,AVM.
+
+ SDK : stands for software development kit.
+ APK : Android Package Kit file format.
+ ADB : Asian Development Bank.
+ AVM : Automated Valuation Model.
+
+*/
