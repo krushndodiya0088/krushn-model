@@ -35,19 +35,19 @@ class _My3_2State extends State<My3_2> {
           Tab(
             child: Text(
               "Meals",
-              style: TextStyle(color: Colors.black),
+              style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold),
             ),
           ),
           Tab(
             child: Text(
               "Sides",
-              style: TextStyle(color: Colors.black),
+              style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold),
             ),
           ),
           Tab(
               child: Text(
             "Snacks",
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold),
           )),
           //  Tab(child: Text("data",style: TextStyle(color: Colors.black),)),
         ]),
@@ -109,13 +109,13 @@ class _My3_2State extends State<My3_2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: Icon(Icons.arrow_back),
+      appBar: AppBar(backgroundColor: Colors.white,
+        leading:  BackButton(
+            color: Colors.black,        
+          ),
         title: Text('Our Menu'),
         actions: [
-          BackButton(
-            color: Colors.black,
-          )
+         Icon(Icons.shopping_cart_outlined,color: Colors.black,)
         ],
       ),
       body: Center(

@@ -134,7 +134,7 @@ class _My3_3State extends State<My3_3> {
         ],
       ),
       bottomNavigationBar: Container(
-        color: Colors.blue,
+        color: Color.fromARGB(255, 232, 224, 224),
         height: 90,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,

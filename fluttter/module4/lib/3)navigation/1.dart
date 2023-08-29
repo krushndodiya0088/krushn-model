@@ -5,11 +5,10 @@ class My3_1 extends StatefulWidget {
   const My3_1({super.key});
 
   @override
-  State<My3_1> createState() => _My3_1State();
+  State<My3_1> createState() => My3_1State();
 }
 
-class _My3_1State extends State<My3_1> {
-  bool? mychoise = false;
+class My3_1State extends State<My3_1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,45 +24,113 @@ class _My3_1State extends State<My3_1> {
                 ),
                 offset: Offset(-180, -15)),
           ),
-          //default tab bar
-          Align(
-            child: Transform.translate(
-                child: Container(
-                  height: 500,
-                  width: double.maxFinite,
-                  // color: Colors.black,
-                  child: DefaultTabController(
-                      length: 2,
-                      child: Scaffold(
-                        appBar: AppBar(
-                            backgroundColor: Color.fromARGB(250, 255, 255, 255),
-                            //  bottom:
-                            flexibleSpace:
-                                TabBar(dividerColor: Colors.red, tabs: [
-                              Tab(
-                                child: Text(
-                                  "Sign in",
-                                  style: TextStyle(
-                                      color: Colors.red,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20),
-                                ),
-                              ),
-                              Tab(
-                                child: Text(
-                                  "Sign up",
-                                  style: TextStyle(
-                                      color: Colors.red,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20),
-                                ),
-                              )
-                            ])),
-                        body: TabBarView(children: [
-                          //sign in body
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(
+          // tab bar calling
+          Container(height: 450,width: 400,child: tab()),        
+          //devider
+          Row(children: <Widget>[
+            Expanded(
+                child: Divider(
+              height: 20,
+              color: Colors.black,
+              thickness: 3,
+            )),
+            Text(
+              "OR",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            ),
+            Expanded(
+                child: Divider(
+              height: 20,
+              color: Colors.black,
+              thickness: 3,
+            )),
+          ]),
+// end devider
+// bottom part
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+            "Sign in using:",
+            style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(padding: EdgeInsets.all(15)),
+              Image.asset(
+                "google-logo-9826.png",
+                cacheHeight: 70,
+                width: 70,
+              ),
+              Image.asset(
+                "Facebook_Logo_(2019).png",
+                cacheHeight: 60,
+                width: 60,
+              ),
+              Image.asset(
+                "pngwing.com.png",
+                cacheHeight: 80,
+                width: 80,
+              ),
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}
+
+//
+
+//  tab bar creation
+class tab extends StatefulWidget {
+  const tab({super.key});
+
+  @override
+  State<tab> createState() => _tabState();
+}
+
+class _tabState extends State<tab> with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+  bool? mychoise = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 2, vsync: this);
+    _tabController.animateTo(0);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Scaffold(
+      //
+      body: Column(
+        children: [
+          TabBar(controller: _tabController, tabs: <Widget>[
+            Tab(
+              child: Text(
+                "Sign in",
+                style: TextStyle(color: Colors.red,fontSize: 20,fontWeight: FontWeight.bold),
+              ),
+            ),
+            Tab(
+              child: Text(
+                "Sign up",
+                style: TextStyle(color: Colors.red,fontSize: 20,fontWeight: FontWeight.bold),
+              ),
+            ),
+          ]),
+          SizedBox(height: 20,),
+          Expanded(
+            child: TabBarView(controller: _tabController, children: [
+             //
+            Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
@@ -146,70 +213,11 @@ class _My3_1State extends State<My3_1> {
                                 ),
                               ],
                             ),
-                          ),
-                          //sine up body
-                          Column(
-                            children: [Text("data"), TextField()],
-                          )
-                        ]),
-                      )),
-                ),
-                offset: Offset(0, 0)),
+              Column(),
+            ]),
           ),
-          //devider
-          Row(children: <Widget>[
-            Expanded(
-                child: Divider(
-              height: 20,
-              color: Colors.black,
-              thickness: 3,
-            )),
-            Text(
-              "OR",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-            ),
-            Expanded(
-                child: Divider(
-              height: 20,
-              color: Colors.black,
-              thickness: 3,
-            )),
-          ]),
-// end devider
-// bottom part
-          SizedBox(
-            height: 10,
-          ),
-          Text(
-            "Sign in using:",
-            style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(padding: EdgeInsets.all(15)),
-              Image.asset(
-                "google-logo-9826.png",
-                cacheHeight: 70,
-                width: 70,
-              ),
-              Image.asset(
-                "Facebook_Logo_(2019).png",
-                cacheHeight: 60,
-                width: 60,
-              ),
-              Image.asset(
-                "pngwing.com.png",
-                cacheHeight: 80,
-                width: 80,
-              ),
-            ],
-          )
         ],
       ),
-    );
+    ));
   }
 }
